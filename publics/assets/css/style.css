@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #eee;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+a {
+    color: #02ff74;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #02ff74;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #1f1f1f;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    position: relative;
+    z-index: 10000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: #02ff74;
+}
+
+.logo-svg {
+    width: 48px;
+    height: 48px;
+    transition: transform 0.4s ease;
+}
+
+.logo-svg:hover {
+    transform: rotate(15deg);
+}
+
+/* Nav desktop */
+nav {
+    position: static;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.nav-links a,
+#theme-toggle {
+    font-weight: 600;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    color: #02ff74;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+#theme-toggle:hover {
+    color: #02ff74;
+}
+
+#theme-toggle {
+    font-size: 1.4rem;
+}
+
+/* Nav toggle hamburger button - hidden desktop */
+#nav-toggle {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #02ff74;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#nav-toggle:hover {
+    color: #02ff74;
+}
+
+main {
+    flex-grow: 1;
+    max-width: 1100px;
+    margin: 40px auto;
+    width: 90%;
+}
+
+#hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    gap: 20px;
+}
+
+.hero-content {
+    flex: 1 1 350px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #02ff74;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    max-width: 520px;
+}
+
+.btn-primary {
+    padding: 12px 30px;
+    background: #02ff74;
+    color: #121212;
+    font-weight: 700;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px #02ff74;
+    transition: background 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background: #02ff74;
+    box-shadow: 0 6px 20px #02ff74;
+    color: #fff;
+}
+
+.hero-illustration {
+    flex: 1 1 300px;
+}
+
+.container {
+    margin-bottom: 50px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #02ff74;
+    border-bottom: 3px solid #02ff74;
+    padding-bottom: 8px;
+    max-width: fit-content;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 25px 20px;
+    box-shadow: 0 0 10px #02ff74;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 15px #02ff74;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #02ff74;
+}
+
+.admin-cards {
+    gap: 30px;
+}
+
+.admin-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 0 12px #02ff74;
+    transition: box-shadow 0.3s ease;
+}
+
+.admin-card:hover {
+    box-shadow: 0 0 18px #02ff79;
+}
+
+.admin-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.admin-info h3 {
+    margin-bottom: 5px;
+    color: #02ff74;
+}
+
+.admin-info p {
+    margin-bottom: 12px;
+    color: #ccc;
+}
+
+.btn-wa {
+    padding: 8px 18px;
+    background-color: #02ff74;
+    color: white;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px #02ff74;
+    transition: background-color 0.3s ease;
+}
+
+.btn-wa:hover {
+    background-color: #02ff74;
+    box-shadow: 0 6px 16px #02ff74;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #1f1f1f;
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Light theme */
+body.light-theme {
+    background-color: #f9f9f9;
+    color: #222;
+}
+
+body.light-theme header {
+    background-color: #ddd;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body.light-theme .logo,
+body.light-theme .nav-links a,
+body.light-theme #theme-toggle {
+    color: #02ff74;
+}
+
+body.light-theme a:hover,
+body.light-theme #theme-toggle:hover {
+    color: #02ff74;
+}
+
+body.light-theme .card,
+body.light-theme .admin-card {
+    background-color: #fff;
+    box-shadow: 0 0 10px #02ff74;
+    color: #222;
+}
+
+body.light-theme .admin-info p {
+    color: #444;
+}
+
+body.light-theme .btn-primary {
+    background-color: #02ff74;
+    color: #fff;
+    box-shadow: 0 4px 15px #02ff74;
+}
+
+body.light-theme .btn-primary:hover {
+    background-color: #02ff74;
+    box-shadow: 0 6px 20px #02ff74;
+}
+
+body.light-theme .btn-wa {
+    background-color: #02ff74;
+    box-shadow: 0 4px 12px #02ff74;
+}
+
+body.light-theme .btn-wa:hover {
+    background-color: #02ff74;
+    box-shadow: 0 6px 16px #02ff74;
+}
+
+/* Responsive for mobile */
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    #nav-toggle {
+        display: block;
+    }
+
+    nav.nav-menu {
+        position: fixed;
+        top: 0;
+        right: -250px; /* offscreen */
+        width: 250px;
+        height: 100vh;
+        background-color: #1f1f1f;
+        box-shadow: -3px 0 15px rgba(0,0,0,0.8);
+        transition: right 0.3s ease;
+        padding-top: 60px;
+        z-index: 9999;
+        display: block;
+    }
+
+    nav.nav-menu.open {
+        right: 0;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 20px;
+    }
+
+    .nav-links a,
+    #theme-toggle {
+        font-size: 1.2rem;
+    }
+
+    main {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    #hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-illustration {
+        order: -1;
+    }
+}
